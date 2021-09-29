@@ -3,9 +3,9 @@
 
 using namespace std;
 
-double Bai1b(int n, double &S)
+double Bai1b(int n)
 {
-    S = 0;
+    double S = 0;
     for (int i = 2; i <= n; ++i)
     {
         S += double(i - 1) / i;
@@ -16,10 +16,9 @@ double Bai1b(int n, double &S)
 int main()
 {
     int n;
-    double S;
     cout << "Nhap n: ";
     cin >> n;
-    Bai1b(n, S);
+    double S = Bai1b(n);
     cout << "S = " << S << endl;
     system("pause");
     return 0;

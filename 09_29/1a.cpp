@@ -2,16 +2,10 @@
 #include <cmath>
 
 using namespace std;
-/*
-Bài 1a:
-    input: n thuộc N, n > 0
-    output: S số thực
-    có 1 input
-*/
 
-double Bai1a(int n, double &S)
+double Bai1a(int n)
 {
-    S = 0;
+    double S = 0;
     for (int i = 1; i <= n; ++i)
     {
         S += sqrt(i);
@@ -22,10 +16,9 @@ double Bai1a(int n, double &S)
 int main()
 {
     int n;
-    double S;
     cout << "Nhap n: ";
     cin >> n;
-    Bai1a(n, S);
+    double S = Bai1a(n);
     cout << "S = " << S << endl;
     system("pause");
     return 0;

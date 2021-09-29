@@ -4,12 +4,12 @@ using namespace std;
 
 #include "utils.cpp"
 
-double Bai1c(int n)
+double Bai3a(double x, int n)
 {
-    double S = 1;
+    double S = x;
     for (int i = 2; i <= n; ++i)
     {
-        S += pow(-1, (i + 1)) * (double(1) / factorial(i));
+        S += pow(-1, (i + 1)) * (pow(x, i) / factorial(i));
     }
     return S;
 }
@@ -17,10 +17,14 @@ double Bai1c(int n)
 int main()
 {
     int n;
-    cout << "Bai 1c\n"
+    double x;
+
+    cout << "Bai 3a\n"
          << "Nhap n: ";
     cin >> n;
-    double S = Bai1c(n);
+    cout << "Nhap x: ";
+    cin >> x;
+    double S = Bai3a(n, x);
     cout << "S = " << S << endl;
     system("pause");
     return 0;
