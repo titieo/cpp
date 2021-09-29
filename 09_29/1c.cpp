@@ -1,14 +1,15 @@
 #include <iostream>
-// #include <cmath>
-
+#include <cmath>
 using namespace std;
 
-double Bai1b(int n, double &S)
+#include "utils.cpp"
+
+double Bai1c(int n, double &S)
 {
-    S = 0;
+    S = 1;
     for (int i = 2; i <= n; ++i)
     {
-        S += double(i - 1) / i;
+        S += pow(-1, (i + 1)) * (double(1) / factorial(i));
     }
     return S;
 }
@@ -17,9 +18,10 @@ int main()
 {
     int n;
     double S;
-    cout << "Nhap n: ";
+    cout << "Bai 1c\n"
+         << "Nhap n: ";
     cin >> n;
-    Bai1b(n, S);
+    Bai1c(n, S);
     cout << "S = " << S << endl;
     system("pause");
     return 0;
