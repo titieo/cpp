@@ -4,10 +4,11 @@ using namespace std;
 
 int Bai2b(int k, int n, int m)
 {
-    int S = 1;
+    int S = 1, h = 1;
     for (int i = 1; i <= n; ++i)
     {
-        S += pow(k, i);
+        h = h * k % m;
+        S = S % m + h;
     }
     S = S % m;
     return S;

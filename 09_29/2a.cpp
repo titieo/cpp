@@ -2,16 +2,16 @@
 
 using namespace std;
 
-#include "utils.cpp"
+// #include "utils.cpp"
 
 int Bai2a(int n, int m)
 {
-    int S = 0;
+    int S = 0, h = 1;
     for (int i = 1; i <= n; ++i)
     {
-        S += factorial(i);
+        h = h * i % m;
+        S = (S + h) % m;
     }
-    S = S % m;
     return S;
 }
 

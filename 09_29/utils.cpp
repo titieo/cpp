@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int factorial(int n)
+long long factorial(int n)
 {
     int result = 1;
     if (n <= 0)

@@ -14,7 +14,8 @@ double Bai1f(int n)
     return s;
 }
 
-int main() {
+int main()
+{
     int n;
     cin >> n;
     cout << Bai1f(n);
