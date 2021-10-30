@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdio>
 using namespace std;
-typedef long long ll;
+typedef unsigned long long ll;
 
 int countBottles(ll a, ll n, ll c)
 {
